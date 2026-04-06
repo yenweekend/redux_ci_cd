@@ -7,8 +7,6 @@ import type { RootState, AppDispatch } from "@/redux/store";
 const PostLists = () => {
   const dispatch = useDispatch<AppDispatch>();
 
-  const a = 123;
-
   const { items, status } = useSelector((state: RootState) => state.posts);
   useEffect(() => {
     dispatch(fetchPosts());
